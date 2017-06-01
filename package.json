@@ -1,7 +1,7 @@
 {
   "name": "PhantomIMG",
   "description": "A simple API for serving dynamic images.",
-  "license": "MIT"
+  "license": "MIT",
   "main": "index.js",
   "scripts": {
     "start": "micro"
