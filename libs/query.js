@@ -12,6 +12,8 @@ const parseQueries = queries => {
 
 module.exports = url => {
   const params = parseQueries(parseUrl(url).query)
-  params.urlValid = validator.isURL(params.url, { require_protocol: true })
+  params.urlValid = validator.isURL(params.url || '', {
+    require_protocol: true
+  })
   return params
 }
