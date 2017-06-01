@@ -43,9 +43,3 @@ cd PhantomIMG
 yarn
 yarn start
 ```
-
-
-
-##### License
-
-MIT  © Lewis Freiberg 2017
