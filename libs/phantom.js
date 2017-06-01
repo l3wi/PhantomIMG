@@ -3,7 +3,7 @@ const pool = require('./pool')
 const log = console.log
 
 module.exports = async (url, size, crop) => {
-  const maData = await pool.use(async instance => {
+  return await pool.use(async instance => {
     const page = await instance.createPage()
     // Set the viewport
     await page.property('viewportSize', {
@@ -20,12 +20,14 @@ module.exports = async (url, size, crop) => {
       console.log('Requesting', requestData.url)
     })
 
-    await page.property('clipRect', {
-      top: 0,
-      left: 0,
-      width: size.width,
-      height: size.height
-    })
+    if (crop) {
+      await page.property('clipRect', {
+        top: 0,
+        left: 0,
+        width: size.width,
+        height: size.height
+      })
+    }
 
     const status = await page.open(url)
     const image = await page.renderBase64()
@@ -34,8 +36,6 @@ module.exports = async (url, size, crop) => {
     console.log('Returned page with:', status)
     return image
   })
-
-  return maData
 }
 // module.exports = async (url, size, crop) => {
 //   const instance = await phantom.create(['--ignore-ssl-errors=yes'], {
