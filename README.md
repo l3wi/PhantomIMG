@@ -18,7 +18,7 @@ localhost:3000/image.png?url=google.com
 // this asks the service to return Google as an image
 
 // Width & Height - Not required (one can be passed alone)
-localhost:3000/image.png?url=google.com&width=1920&height=200
+localhost:3000/image.png?url=https://google.com&width=1920&height=200
 // this sets the viewport height and width (defaults to 1200x800)
 
 // Crop - Not required 
