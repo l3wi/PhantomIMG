@@ -1,3 +1,6 @@
+// URL Parser
+// Takes url from request, converts it to a query string and then parses it.
+
 const qs = require('query-string')
 const up = require('url-parse')
 var validator = require('validator')
