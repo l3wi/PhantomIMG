@@ -1,5 +1,6 @@
 {
-  "name": "phantomAPI",
+  "name": "PhantomIMG",
+  "description": "A simple resourced balanced API for PhantomJS to enable dynamically serving of non-existent images.",
   "main": "index.js",
   "scripts": {
     "start": "micro"
