@@ -2,6 +2,8 @@
 
 A simple API for serving dynamic images.
 
+[![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/l3wi/PhantomIMG)
+
 ### Overview
 
 Phantom IMG is a simple api for serving dynamic images as if they existed. It achieves this by lauching Phantom JS when a get request is called, rendering a webpage in memory and then serving it back to the client as a PNG.
