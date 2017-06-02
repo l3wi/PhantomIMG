@@ -6,7 +6,7 @@ A simple API for serving dynamic images.
 
 ### Overview
 
-Phantom IMG is a simple api for serving dynamic images as if they existed. It achieves this by lauching Phantom JS when a get request is called, rendering a webpage in memory and then serving it back to the client as a file.
+Phantom IMG is a simple api for serving dynamic images as if they existed. It achieves this by lauching Phantom JS when a get request is recieved, rendering a webpage in memory and then serving it back to the client as a file.
 
 The server is passed query string parameters such as url, viewport, crop & format. It then returns an image of the webpage requested.
 
@@ -14,7 +14,7 @@ The server is passed query string parameters such as url, viewport, crop & forma
 
 We needed to generate 3,240,000 unique images for Open Graph social shares. 
 
-A web app has a randomiser that serves up unique pages whenever a user accesses it. We were required to have correctly sized images for soical shares.
+Our web app has a randomiser that serves up unique pages whenever a user accesses it. We were required to have correctly sized images for soical shares.
 
 Usually you'd generate the images before hand. In this case, that would've result in roughly 486,000 GB of 150kB .JPGs. That would've take a while to generate and also cost a ton to host and serve. Not to mention the fact that only a few % of these images would ever be served, best case.
 
@@ -51,7 +51,7 @@ This sets the viewport height and width (defaults to 1200x800)
 
 
 
-**Crop - Not required **
+**Crop - Not required**
 
 this crops the page to the viewport height & width (defaults to false)
 
@@ -74,7 +74,7 @@ This sets the user agent specified device (defaults to Mac w/ Chrome)
 
 ### Install
 
-``` javascript
+``` 
 git clone https://github.com/l3wi/PhantomIMG.git
 cd PhantomIMG
 yarn
